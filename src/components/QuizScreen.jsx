@@ -72,7 +72,7 @@ export default function QuizScreen({ category, onFinish, onBack }) {
   const timerBg = timeLeft > 10 ? 'bg-green-400' : timeLeft > 5 ? 'bg-yellow-400' : 'bg-red-400';
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-linear-to-br from-slate-900 via-purple-950 to-slate-900 flex items-center justify-center p-4">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
@@ -106,7 +106,7 @@ export default function QuizScreen({ category, onFinish, onBack }) {
         {/* Progress bar */}
         <div className="w-full h-1.5 bg-white/10 rounded-full mb-8 overflow-hidden">
           <div
-            className={`h-full bg-gradient-to-r ${category.color} rounded-full transition-all duration-500`}
+            className={`h-full bg-linear-to-r ${category.color} rounded-full transition-all duration-500`}
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -122,7 +122,7 @@ export default function QuizScreen({ category, onFinish, onBack }) {
         {/* Question card */}
         <div className="bg-white/5 border border-white/10 rounded-3xl p-8 mb-6 backdrop-blur-sm">
           {/* Category badge */}
-          <div className={`inline-flex items-center gap-2 bg-gradient-to-r ${category.color} px-3 py-1 rounded-full mb-5`}>
+          <div className={`inline-flex items-center gap-2 bg-linear-to-r ${category.color} px-3 py-1 rounded-full mb-5`}>
             <span className="text-sm">{category.icon}</span>
             <span className="text-white text-xs font-semibold uppercase tracking-wider">{category.name}</span>
           </div>
@@ -140,7 +140,7 @@ export default function QuizScreen({ category, onFinish, onBack }) {
               onClick={() => handleSelect(idx)}
               className={`w-full flex items-center gap-4 border rounded-2xl px-5 py-4 text-left transition-all duration-200 ${getOptionStyle(idx)}`}
             >
-              <span className={`flex-shrink-0 w-8 h-8 rounded-lg border flex items-center justify-center text-sm font-bold transition-colors ${
+              <span className={`shrink-0 w-8 h-8 rounded-lg border flex items-center justify-center text-sm font-bold transition-colors ${
                 confirmed && idx === question.answer
                   ? 'bg-green-400 border-green-400 text-slate-900'
                   : confirmed && idx === selected && selected !== question.answer
@@ -177,14 +177,14 @@ export default function QuizScreen({ category, onFinish, onBack }) {
             <button
               onClick={handleConfirm}
               disabled={selected === null}
-              className="flex-1 bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-400 hover:to-cyan-400 disabled:from-white/10 disabled:to-white/10 disabled:text-white/30 text-white font-bold py-4 rounded-2xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] disabled:cursor-not-allowed disabled:scale-100"
+              className="flex-1 bg-linear-to-r from-purple-500 to-cyan-500 hover:from-purple-400 hover:to-cyan-400 disabled:from-white/10 disabled:to-white/10 disabled:text-white/30 text-white font-bold py-4 rounded-2xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] disabled:cursor-not-allowed disabled:scale-100"
             >
               Confirm Answer
             </button>
           ) : (
             <button
               onClick={handleNext}
-              className="flex-1 bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-400 hover:to-cyan-400 text-white font-bold py-4 rounded-2xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+              className="flex-1 bg-linear-to-r from-purple-500 to-cyan-500 hover:from-purple-400 hover:to-cyan-400 text-white font-bold py-4 rounded-2xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
             >
               {current + 1 < questions.length ? (
                 <>

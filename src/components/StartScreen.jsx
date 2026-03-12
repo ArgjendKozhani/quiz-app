@@ -1,6 +1,6 @@
 export default function StartScreen({ onStart }) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-linear-to-br from-slate-900 via-purple-950 to-slate-900 flex items-center justify-center p-4">
       {/* Ambient glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
@@ -16,7 +16,7 @@ export default function StartScreen({ onStart }) {
 
         {/* Title */}
         <h1 className="text-6xl sm:text-7xl font-black text-white mb-4 leading-tight">
-          Quiz<span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Master</span>
+          Quiz<span className="bg-linear-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Master</span>
         </h1>
         <p className="text-white/60 text-lg sm:text-xl mb-12 max-w-md mx-auto leading-relaxed">
           Test your web development knowledge across four categories. How much do you really know?
@@ -39,7 +39,7 @@ export default function StartScreen({ onStart }) {
         {/* CTA */}
         <button
           onClick={onStart}
-          className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-400 hover:to-cyan-400 text-white font-bold text-lg px-10 py-4 rounded-2xl transition-all duration-300 shadow-2xl shadow-purple-500/30 hover:shadow-purple-500/50 hover:scale-105 active:scale-95"
+          className="group relative inline-flex items-center gap-3 bg-linear-to-r from-purple-500 to-cyan-500 hover:from-purple-400 hover:to-cyan-400 text-white font-bold text-lg px-10 py-4 rounded-2xl transition-all duration-300 shadow-2xl shadow-purple-500/30 hover:shadow-purple-500/50 hover:scale-105 active:scale-95"
         >
           Start Quiz
           <svg

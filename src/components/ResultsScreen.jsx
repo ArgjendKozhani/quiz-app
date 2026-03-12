@@ -16,7 +16,7 @@ export default function ResultsScreen({ result, onRestart, onHome }) {
   const dashOffset = circumference - (percentage / 100) * circumference;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-linear-to-br from-slate-900 via-purple-950 to-slate-900 flex items-center justify-center p-4">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
@@ -57,7 +57,7 @@ export default function ResultsScreen({ result, onRestart, onHome }) {
           </div>
 
           <div className="text-4xl mb-2">{rank.emoji}</div>
-          <h2 className={`text-3xl font-black mb-2 bg-gradient-to-r ${rank.color} bg-clip-text text-transparent`}>
+          <h2 className={`text-3xl font-black mb-2 bg-linear-to-r ${rank.color} bg-clip-text text-transparent`}>
             {rank.label}
           </h2>
           <p className="text-white/50 text-sm mb-6">
@@ -87,7 +87,7 @@ export default function ResultsScreen({ result, onRestart, onHome }) {
           <div className="space-y-2">
             {answers.map((ans, i) => (
               <div key={i} className={`flex items-center gap-3 p-3 rounded-xl ${ans.isCorrect ? 'bg-green-500/10' : 'bg-red-500/10'}`}>
-                <span className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold flex-shrink-0 ${ans.isCorrect ? 'bg-green-400 text-slate-900' : 'bg-red-400 text-white'}`}>
+                <span className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 ${ans.isCorrect ? 'bg-green-400 text-slate-900' : 'bg-red-400 text-white'}`}>
                   {ans.isCorrect ? '✓' : '✗'}
                 </span>
                 <span className="text-white/70 text-sm flex-1 truncate">
@@ -111,7 +111,7 @@ export default function ResultsScreen({ result, onRestart, onHome }) {
           </button>
           <button
             onClick={onRestart}
-            className="flex-1 bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-400 hover:to-cyan-400 text-white font-bold py-4 rounded-2xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+            className="flex-1 bg-linear-to-r from-purple-500 to-cyan-500 hover:from-purple-400 hover:to-cyan-400 text-white font-bold py-4 rounded-2xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
           >
             Play Again
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
